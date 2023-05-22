@@ -1,0 +1,40 @@
+
+<section class="mt-3">
+    <app-loader-alpha [showOverlay]="showOverlay"></app-loader-alpha>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col p-0">
+            <div class="alert alert-warning  mb-0 text-center" role="alert">
+              <strong>Logged In As:</strong> aaronbryan.briones@gmail.com
+            </div>
+          </div>
+        </div>
+        <div class="row" style="height: 100vh">
+          <div class="col-2 bg-cgi y px-0 overflow-auto custom-scrollbar" style="direction: rtl;" >
+            <div class="container-fluid text-center">
+              <img src="/src/app/assets/icons/cgi-dash-2.png" width="160" class="my-5 mb-2" alt="" loading="lazy"/>
+            </div>
+            <div class="mb-5">
+              <!-- <app-sidebar [navItems]="navItems" (onClick)="handleClick($event)"></app-sidebar> -->
+              <div class="list-group list-group-flush">
+                <ng-container *ngFor="let nav of navItems">
+                    
+                    <button (click)="handleClick(nav)" class="sidebar list-group-item list-group-item-action border-0 pr-0 {{nav.class}}" [ngStyle]="{ 'padding-left': depth * 30 + 'px', 'outline': 'none' }">
+                         {{ nav.displayName }} 
+                    </button>
+    
+             
+                </ng-container>
+            </div>
+            </div>
+          </div>
+          <div class="col-10 px-0">
+            <router-outlet></router-outlet>
+            <!-- <app-dashboard-content></app-dashboard-content>
+            <career-objectives></career-objectives> -->
+          </div>
+        </div>
+      </div>
+    
+  </section>

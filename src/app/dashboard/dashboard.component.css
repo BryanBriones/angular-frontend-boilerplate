@@ -1,0 +1,30 @@
+.page-header{ /*h3 -used for  Page Title Each Page*/
+
+    font-size: 20px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: 600;
+
+
+    letter-spacing: 0.6px;
+    color: #152C7D;
+}
+
+.font-montserrat{
+    font-family: 'Montserrat';
+}
+
+.bg-cgi{
+    background-color:rgba(202,47,67,255)
+}
+
+.cgi-color{
+    color:rgba(202,47,67,255);
+}
+
+.sidebar.list-group-item:hover{
+    text-decoration: underline;
+    background-color: white;
+    color: black !important;
+
+}

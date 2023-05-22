@@ -1,0 +1,17 @@
+
+
+.avatar{
+    border: 2px rgba(202,47,67,255) solid;
+    border-radius: 10%;
+}
+
+.avatar-pic{
+    border-radius: 10%;
+}
+.bg-cgi{
+    background-color:rgba(202,47,67,255)
+}
+
+.cgi-color{
+    color:rgba(202,47,67,255);
+}

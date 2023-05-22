@@ -1,0 +1,133 @@
+<!-- <app-loader-alpha [showOverlay]="showOverlay"></app-loader-alpha> -->
+<section>
+  <app-loader-alpha [showOverlay]="showOverlay"></app-loader-alpha>
+    <div class="form-row my-3 mx-2">
+      <div class="col-lg-12 col-md-12">
+    
+            <div class="card">
+              <div class="card-header py-2 d-flex justify-content-between align-items-center">
+                <span class="text-black font-weight-bold text-black font-weight-bold"> 
+                  Personal Information
+                </span>
+                <button class="btn btn-danger btn-sm text-black font-weight-bold" [style.width.px]="170">
+                  Uploaded a week ago
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="col d-flex justify-content-between">
+              
+                  <span class="col ml-0 p-0">
+                    <div class="font-lato"><i class="fa fa-dot-circle-o cgi-color mr-1"></i><label class="font-weight-bold font-lato mr-1">Name: </label> Aaron Bryan S.Briones</div>
+                    <div class="font-lato"><i class="fa fa-dot-circle-o cgi-color mr-1"></i><label class="font-weight-bold font-lato mr-1">Email:</label> aaronbryan.briones@gmail.com</div>
+                    <div class="font-lato"><i class="fa fa-dot-circle-o cgi-color mr-1"></i><label class="font-weight-bold font-lato mr-1">Mobile:</label> (63) 926-668-1171</div>
+                    <div class="font-lato"><i class="fa fa-dot-circle-o cgi-color mr-1"></i><label class="font-weight-bold font-lato mr-1">LinkedIn:</label> <a href="http://www.linkedin.com/in/aaron-bryan-briones-54900987/" target="_blank" class="link-primary">linkedin.com/in/aaron-bryan-briones-54900987/</a></div>
+                  </span>
+                 
+                    <div class="avatar"><img src="/src/app/assets/icons/candidate-pic.jpg" width="155" class="my-1 mb-2" alt="" loading="lazy" class="avatar-pic"/></div>
+                    
+                </div>
+               
+              </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="form-row mb-3">
+      <div class="col">
+        <div class="col-lg-12 col-md-12">
+          <div class="card">
+            <div class="card-header py-2 d-flex justify-content-between align-items-center">
+              <span class="text-black font-weight-bold">
+                <!-- <img src="/assets/sys_file/icons/contacts.png" alt="" class="mr-2"> -->
+               Educational Attainment
+              </span>
+              <button class="btn btn-danger btn-sm text-black font-weight-bold" [style.width.px]="170">
+                 Uploaded a week ago
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <ul class="list-group list-group-flush py-1" style="width:100%">
+                  <li  class="list-group-item">
+                    <div class="row">
+                      <span class="col"><div><strong>University</strong> </div></span>
+                      <span class="col"><div><strong>Degree</strong></div></span>
+                      <span class="col"><div><strong>Years Attended</strong></div></span>
+                    </div>
+                  </li>
+                    <li class="list-group-item" *ngFor="let item of educationAttainment; let i = index">
+                      <div class="row">
+                        <span class="col">
+                          <i class="fa fa-dot-circle-o cgi-color"></i> {{ item.university}}
+                        </span>
+                        <span class="col">
+                          <i class="fa fa-dot-circle-o cgi-color"></i>  {{ item.degree}} <br>
+                            {{ item.distinction}}
+                        </span>
+                        <span class="col">
+                          <span  class="col">
+                            <i class="fa fa-dot-circle-o cgi-color"></i> {{ item.yearsAttended}}
+                          </span>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row mb-3">
+      <div class="col">
+        <div class="col-lg-12 col-md-12">
+          <div class="card">
+            <div class="card-header py-2 d-flex justify-content-between align-items-center">
+              <span class="text-black font-weight-bold">
+               Professional Experience
+              </span>
+              <button class="btn btn-danger btn-sm text-black font-weight-bold" [style.width.px]="170">
+               Uploaded a week ago
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <ul class="list-group list-group-flush py-1" style="width:100%">
+                  <li  class="list-group-item">
+                    <div class="row">
+                      <span class="col"><div><strong>Role/Job</strong> </div></span>
+                      <span class="col"><div><strong>Company/Project</strong></div></span>
+                      <span class="col"><div><strong>Experience</strong></div></span>
+                      <span class="col"><div><strong>Years</strong></div></span>
+                    </div>
+                  </li>
+                    <li class="list-group-item" *ngFor="let item of professionalExperience; let i = index">
+                      <div class="row">
+                        <span class="col">
+                          <i class="fa fa-dot-circle-o cgi-color"></i> {{ item.role}}
+                        </span>
+                        <span class="col">
+                          <i class="fa fa-dot-circle-o cgi-color"></i>   {{ item.company}}-
+                            {{ item.project}}
+                        </span>
+                        <span class="col">
+                          <i class="fa fa-dot-circle-o cgi-color"></i>  {{ item.roleDesc}}
+                        </span>
+                        <span class="col">
+                          <i class="fa fa-dot-circle-o cgi-color"></i> {{ item.yearsAttended}}
+                      </span>
+                      </div>
+                    </li>
+                  </ul>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <router-outlet>
+  </router-outlet>
