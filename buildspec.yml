@@ -3,14 +3,13 @@ version: 0.2
 phases:
   install:
     commands:
-        - echo Installing source NPM dependencies...
-        - npm install
+      - echo Installing source NPM dependencies...
+      - npm install
   build:
     commands:
-        - echo Build started DEV
-        - npm run build
-    on-failure: ABORT
+      - echo Build started DEV
+      - npm run generate
 artifacts:
   files:
-      - '**/*'
-    base-directory: 'dist'
+    - '**/*'
+  base-directory: 'dist'
