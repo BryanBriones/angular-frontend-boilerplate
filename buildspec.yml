@@ -1,0 +1,26 @@
+version: 0.2
+
+env:
+    variables:
+        CACHE_CONTROL: "86400"
+        S3_BUCKET: "{{s3_bucket_url}}"
+        BUILD_FOLDER: "wwwroot"
+phases:
+  install:
+    runtime-versions:
+        nodejs: 14
+    commands:
+        - echo Installing source NPM dependencies...
+        - npm install
+        - npm install -g @angular/cli@14.2.9
+  build:
+    commands:
+        - echo Build started DEV
+        - npm run build
+        - mv -r src/app/assets wwwroot
+    on-failure: ABORT
+artifacts:
+    files:
+        - '**/*'
+    base-directory: 'wwwroot*'
+    discard-paths: no
