@@ -20,6 +20,5 @@ phases:
     on-failure: ABORT
 artifacts:
     files:
-        - '**/*'
-    base-directory: 'wwwroot*'
+        - 'wwwroot/**/*'
     discard-paths: no
