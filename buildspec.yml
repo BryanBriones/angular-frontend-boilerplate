@@ -17,10 +17,9 @@ phases:
     commands:
         - echo Build started DEV
         - npm run build
-        - cp -r src/app/assets wwwroot
     on-failure: ABORT
 artifacts:
     files:
         - '**/*'
-    base-directory: 'wwwroot'
+    base-directory: 'wwwroot*'
     discard-paths: no
