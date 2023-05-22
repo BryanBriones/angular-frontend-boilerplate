@@ -17,7 +17,7 @@ phases:
     commands:
         - echo Build started DEV
         - npm run build
-        - mv -r src/app/assets wwwroot
+        - cp -r src/app/assets wwwroot
     on-failure: ABORT
 artifacts:
     files:
