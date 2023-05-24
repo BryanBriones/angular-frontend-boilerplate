@@ -1,4 +1,4 @@
-# CGI FRONT END
+# ANGULAR BOILERPLATE WITH WEBPACK
 ## Install dependencies
 npm install
 
