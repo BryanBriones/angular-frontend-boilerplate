@@ -1,4 +1,4 @@
-# ANGULAR BOILERPLATE WITH WEBPACK
+# Angular Boilerplate with Webpack
 ## Install dependencies
 npm install
 
