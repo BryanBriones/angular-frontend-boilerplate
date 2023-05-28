@@ -34,7 +34,7 @@ export class LoginComponent {
     else{
      
       this.showOverlay= true;
-        this.http.post("http://localhost:3000/login",this.loginForm.value).map(res => res.json()).subscribe(
+        this.http.post("http://13.212.159.62:3000/login",this.loginForm.value).map(res => res.json()).subscribe(
         data => {
           
      
