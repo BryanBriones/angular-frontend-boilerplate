@@ -1,4 +1,4 @@
-# CGI FRONT END
+# Angular Boilerplate with Webpack
 ## Install dependencies
 npm install
 
