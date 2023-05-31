@@ -57,7 +57,7 @@ addTask(){
 }
 
 getCareerObjectives(){
-  this.http.get("http://13.214.196.91:3000/careerobjectives").map(res => res.json()).subscribe(
+  this.http.get("http://13.214.177.217:3000/careerobjectives").map(res => res.json()).subscribe(
     data => {
     if (data.status=="OK"){
     this.todos = data.data;
@@ -71,7 +71,7 @@ getCareerObjectives(){
 
 addCareerObjective(objective:any){
 
-  this.http.post("http://13.214.196.91:3000/addcareerobjectives",objective).map(res => res.json()).subscribe(
+  this.http.post("http://13.214.177.217:3000/addcareerobjectives",objective).map(res => res.json()).subscribe(
     data => {
     if (data.status=="OK"){
       this.getCareerObjectives();
@@ -84,7 +84,7 @@ addCareerObjective(objective:any){
 }
 
 deleteCareerObjective(id:any){
-  this.http.delete(`http://13.214.196.91:3000/deletecareerobjectives/${id}`).map(res => res.json()).subscribe(
+  this.http.delete(`http://13.214.177.217:3000/deletecareerobjectives/${id}`).map(res => res.json()).subscribe(
     data => {
     if (data.status=="OK"){
       this.getCareerObjectives();
@@ -106,7 +106,7 @@ toggleEditableFields(id:any){
 
 updateCareerObjective(item:any){
   console.log(item);
-  this.http.put(`http://13.214.196.91:3000/updatecareerobjectives/${item.id}`,{name: item.name,targetdate:item.targetdate,datecompleted:item.datecompleted }).map(res => res.json()).subscribe(
+  this.http.put(`http://13.214.177.217:3000/updatecareerobjectives/${item.id}`,{name: item.name,targetdate:item.targetdate,datecompleted:item.datecompleted }).map(res => res.json()).subscribe(
     data => {
     if (data.status=="OK"){
       this.getCareerObjectives();
